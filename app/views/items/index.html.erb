@@ -1,0 +1,15 @@
+<h1>Here is your current list of things to do!</h1>
+<%= link_to 'New Item', new_item_path %>
+
+<% @items.each do |item| %>
+
+  <div>
+    <h3>What: <%= link_to item.title, item_path(item) %>
+    </h3>
+    <i>Who: <%= item.owner %></i>
+    <%= link_to 'Delete', item_path(item), method: :delete %>
+  </div>
+
+<hr>
+
+<% end %>

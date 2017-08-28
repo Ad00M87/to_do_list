@@ -1,0 +1,23 @@
+<h1>Edit your to-do item</h1>
+
+<%= form_for @item do |f| %>
+
+<div>
+  <%= f.text_field :title, placeholder: 'What do you need to do?', required: true %>
+  <%= f.label :title %>
+</div>
+
+<div>
+  <%= f.text_field :owner, placeholder: "Who needs to do it?", required: true %>
+  <%= f.label :owner %>
+</div>
+
+<div>
+  <%= f.text_area :description, placeholder: "Details" %>
+  <%= f.label :description %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+<% end %>
