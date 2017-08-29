@@ -3,13 +3,17 @@
 
 <% @items.each do |item| %>
 
+
   <div>
     <h3>What: <%= link_to item.title, item_path(item) %>
     </h3>
     <i>Who: <%= item.owner %></i>
     <%= link_to 'Delete', item_path(item), method: :delete %>
+    <strong>PRIORITY: <%= item.priority ? 'YES' : 'NO' %></strong>
   </div>
 
 <hr>
 
 <% end %>
+
+<%= link_to 'Back to Home', static_pages_home_path %>

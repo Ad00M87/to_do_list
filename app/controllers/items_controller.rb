@@ -41,6 +41,6 @@ class ItemsController < ApplicationController
 
   private
     def page_params
-      params.require(:item).permit(:title, :owner, :description)
+      params.require(:item).permit(:title, :owner, :description, :priority)
     end
 end
